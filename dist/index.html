@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>9hour.com</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="home.css">
+
+
+
+</head>
+
+<body id="body">    
+
+    <div id="overlay" onclick="off()"></div>
+    <div id="overlay-search">
+      <input type="text" name="search-mini" id="search-input2" placeholder="search...">
+      <img onclick="search2();getdata();" src="search-icon.jpg">
+
+    </div>
+
+<div id="app">
+
+</div>
+
+    <div class="header">
+        
+
+        </div>                
+
+        <div class="header" id="menu">
+            <div class="header">
+                    <div class="menu1 container" id="menu1">
+                          <div style="padding-bottom: 40px;">
+                             <div class="room" style="  background: linear-gradient(0deg, rgba(130,112,198,0.7), rgba(130,112,198,0.7)), url(living-room1.jpg) repeat;">
+                                <p>PHÒNG KHÁCH</p>
+                             </div>
+                          <div class="room" style="  background: linear-gradient(0deg, rgba(170,176,90,0.8), rgba(170,176,90,0.8)), url(kitchen-room.jpg) repeat;" >
+                                <p>PHÒNG BẾP</p>
+                            </div>
+                           <div class="room" style="  background: linear-gradient(0deg, rgba(86,134,172,0.8), rgba(86,134,172,0.8)), url(bedroom.jpg) repeat;">
+                                <p>PHÒNG NGỦ</p>
+                             </div>
+                           <div class="room" style="  background: linear-gradient(0deg, rgba(202,116,117,0.8), rgba(202,116,117,0.8)), url(bath-room.jpg) repeat;">
+                                <p>PHÒNG TẮM</p>
+                             </div>
+                         <div class="room" style="  background: linear-gradient(0deg, rgba(113,195,155,0.8), rgba(113,195,155,0.8)), url(work-room.jpg) repeat;">
+                                <p>LÀM VIỆC</p>     
+                             </div>
+                        <div class="room" style="  background: linear-gradient(0deg, rgba(106,175,191,0.8), rgba(106,175,191,0.8)), url(kid-room.jpg) repeat;">
+                                <p>PHÒNG TRẺ EM</p>
+                             </div>
+                        <div class="room" style="  background: linear-gradient(0deg, rgba(197,112,180,0.8), rgba(197,112,180,0.8)), url(kid-room.jpg) repeat;">
+                                <p>PHÒNG NGOÀI TRỜI</p>
+                             </div>
+                           <div class="room" style="height: 120px;  background: linear-gradient(0deg, rgba(221,221,221,1), rgba(221,221,221,1)), url(kid-room.jpg) repeat; text-align:center; ">
+                                <div id="end-room">
+                                  <p>XEM TẤT CẢ</p>
+                                </div>
+                             </div>
+                    </div>
+            </div>
+    <div class="header">
+      <div class="container"  id="product">
+          <div class="row product">
+            <div class="col-3" id="title-room">
+              <ul>
+                <li onclick="livingroom()" >PHÒNG KHÁCH</li>
+                <li onclick="kitchenroom()">PHÒNG BẾP</li>
+                <li>PHÒNG NGỦ</li>
+                <li>PHÒNG TẮM</li>
+                <li>PHÒNG BẾP</li>
+                <li>PHÒNG LÀM VIỆC</li>
+                <li>PHÒNG TRẺ EM</li>
+              </ul>
+            </div>
+            <div class="col-3" id="living-room">
+              <ul>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+                <li>Ghế Ngồi</li>
+              </ul>
+            </div>
+            <div class="col-3" id="living-room2">
+              <ul>
+                <li>Bàn</li>
+                <li>Bàn</li>
+                <li>Bàn</li>
+                <li>Bàn</li>
+                <li>Bàn</li><li>Bàn</li>
+
+                <li>Bàn</li>
+                <li>Bàn</li>
+                <li>Bàn</li>
+                <li>Bàn</li>
+
+                <li>Bàn</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row" style="display: none;">
+            <div class="col-3" id="living-room-change">
+              <ul>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+                <li>Ghế Ngồi Phòng Bếp</li>
+              </ul>
+            </div>
+            <div class="col-3" id="living-room2-change">
+              <ul>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+                <li>Bàn PHÒNG BẾP</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      
+    </div>
+
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="btn-group">
+                        <button type="button" class=" btn" id="button-new" style="border: none;">
+                            <img src="idea.jpg">
+                            <span  id="">Ý TƯỞNG</span>                        
+                        </button> 
+
+
+                        <button type="button" id="button-new2" class="btn">
+                          <img src="community.jpg">
+                           <span  id="button-new">SẢN PHẨM</span> 
+                        </button>
+                        <button type="button" class="btn"  >
+                          <img src="service.jpg">
+                            <span  id="button-new">DỊCH VỤ</span> 
+                        </button>
+                        <button type="button" class="btn">
+                          <img src="consult.jpg">
+                            <span  id="button-new">TƯ VẤN</span> 
+                        </button>
+                        <button type="button" class="btn">
+                          <img src="community.jpg">
+                            <span  id="button-new">CỘNG ĐỒNG</span> 
+                        </button>
+                        <button type="button" class="btn">
+                          <img src="news.jpg">
+                            <span  id="button-new">TIN TỨC</span> 
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="post">
+
+            <blog-post></blog-post>
+                
+        </div>
+      <div class="content">
+        <div class=" container" id="menu-tholamvuon" style="padding-top: 40px;">
+            <div class="row no-gutters">
+                <div class="col-md-4 ">
+                    <div class="row leader">
+                        <p>TÌM KIẾM</p>
+                        <input id="mini-search" type="text" name="mini-search" placeholder="Thợ làm vườn">
+                    </div>
+                    <hr>
+                    <div class="row">
+
+                      <div class="col-md-12 col-6">
+                        <div class="col-12">
+                            <p>ĐỊA ĐIỂM</p>
+                        </div>
+                        <div class="col-12">
+                            <form>
+                                <ul class="city">
+
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Hà Nội</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Tp.HCM</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đà Nẵng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Lâm Đồng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đồng nai</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Cần Thơ</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Hà Nội</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Tp.HCM</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đà Nẵng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Lâm Đồng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đồng nai</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Cần Thơ</label>
+                                    </li>
+
+                                </ul>
+                            </form>
+                        </div>
+                        </div>
+
+                    <hr>
+
+                      <div class="col-md-12 col-6">
+                        <div class="col-12">
+                            <p>PHONG CÁCH</p>
+                        </div>
+                        <div class="col-12">
+                            <form>
+                                <ul class="city">
+
+                                    <li>
+                                        <input type="radio" id="hiendai" name="select">
+                                        <label for="hiendai">Hiện đại</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="tancodien" name="select">
+                                        <label for="tancodien">Tân cổ điển</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="bacau" name="select">
+                                        <label for="bacau">Bắc âu</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="toigian" name="select">
+                                        <label for="toigian">Tối giản</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="phuctap" name="select">
+                                        <label for="phuctap">Phức Tạp</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="cauki" name="select">
+                                        <label for="cauki">Cầu kì</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Hà Nội</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Tp.HCM</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đà Nẵng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Lâm Đồng</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Đồng nai</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="hanoi" name="select">
+                                        <label for="hanoi">Cần Thơ</label>
+                                    </li>
+
+                                </ul>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                <div class="col-md-10" style="max-width: 960px; margin-left: 30px;" >
+                    <div class="row title">
+                        <div class="title">
+                            <h3>18.029 THỢ LÀM VƯỜN</h3>
+                        </div>
+                        <div class="button btn2">
+                            <button type="button" class=" btn btn-outline ml-auto">
+                                <span>màu tối</span>
+                                <img   src="iconx.jpg" onclick="this.parentNode.style.display = 'none';">
+                            </button>
+                            <button type="button"   class=" btn btn-outline">
+                                <span>Phòng khách</span>
+                                 <img   src="iconx.jpg" onclick="this.parentNode.style.display = 'none';">
+                            </button>
+                            <button   class=" btn btn-outline">
+                                <span>Phòng họp</span>
+                                 <img   src="iconx.jpg" onclick="this.parentNode.style.display = 'none';">
+                            </button>
+                            <button type="button" class=" btn btn-outline">
+                                <span>Phòng khách</span>
+                                 <img   src="iconx.jpg" onclick="this.parentNode.style.display = 'none';">
+                            </button>
+                            <button type="button" class=" btn btn-outline">
+                                <span>Phòng họp</span>
+                                 <img   src="iconx.jpg" onclick="this.parentNode.style.display = 'none';">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="post">
+
+                    <blog-post></blog-post>
+                        
+                    </div>
+                    <div style="text-align:center;margin-bottom: 105px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden">
+                    
+                   
+                    <span> <button onclick="prevSlides()">prev</button></span>
+                        <span id="dot1" class="dot" onclick="currentSlide(event)">1</span>
+                        <span id="dot2" class="dot" onclick="currentSlide(event)">2</span>
+                        <span id="dot3" class="dot" onclick="currentSlide(event)">3</span>
+                        <span id="dot4" class="dot" onclick="currentSlide(event)">4</span>
+                        <span id="dot5" class="dot" onclick="currentSlide(event)">5</span>
+                        <span> <button onclick="plusSlides()">next</button></span>
+               
+      
+                
+                    </div>
+                    
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+      <div class="footer d-flex justify-content-center align-items-center" id="footer" style="background: url('background-content.jpg');height: 240px; background-position: center;">
+        <div class="img">
+                  <img src="wallet01.png">
+                  <img src="2.png">
+                  <img src="update.png"> 
+        </div>
+        
+        </div>
+        <div class="footer end-footer" id="end-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12" style="margin-top: 95px;">
+                        <div class="row">
+                            <img src="Trangchu.jpg">
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <span>Trang chủ</span><span>/</span><span>Giới thiệu</span>
+                            <span>/</span><span>Thông báo</span><span>/</span><span>Liên hệ</span>
+                        </div>
+                        <hr>
+                        <div class="position">
+                            <div class="row" id="check-in">
+                                <img src="location.jpg"><span style="margin-left: 10px ">Tầng 3, Tòa nhà HC, 102 Thái Thịnh, Đống Đa, Hà Nội</span>
+                            </div>
+                            <div class="row phone">
+                                <img src="phone-number2.jpg"><span style="margin-left: 10px ">(+84)439352690</span>
+                                <img src="mail.jpg" style="margin-left:20px;"><span style="margin-left: 10px ">trading@Furmi.com.vn</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <span>
+          Copyright &#169; 2016. Furmi All Right Reserved
+        </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 list" style="max-width: 560px; margin-left: 120px; margin-top: 86px;">
+                        <div class="list1">
+                            <div class="row">
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">Nội Thất</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">Nội Thất</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                        <li>Ghế đũi</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">Nội Thất</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">Nội Thất</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row list2">
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">VĂN PHÒNG</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">ĐIỆN TỬ</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                        <li>Ghế đũi</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">VĂN PHÒNG</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Đèn đường</li>
+                                    </ul>
+                                </div>
+                                <div class="col-3">
+                                    <ul>
+                                        <li class="title-menu">ĐỒ VẬT</li>
+                                        <li>Bàn ghế</li>
+                                        <li>Bủ chén</li>
+                                        <li>Bàn salon</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+        <div class="container d-flex align-items-center" id="login-sceen"  style="height: 80%;">        
+            <div style= " margin: 0 auto; background: url('login-background.jpg');" id="login-content"  >
+
+            <form name="submit-to-google-sheet">
+              <input name="email" type="email" placeholder="Email" id="username" required>
+              <input name="firstName" type="text" id="password" placeholder="First Name">
+              <input name="lastName" type="text" id="c" placeholder="Last Name">
+            <a href="#header-login"> <button type="submit" onclick="login2()"> 
+                Đăng nhập
+              </button>
+
+            </a>
+            </form>
+
+
+
+            </div>
+          </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="../dist/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>
